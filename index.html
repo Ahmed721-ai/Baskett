@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard</title>
+    <link rel="stylesheet" href="prj.css">
+</head>
+<body>
+    <div class="timer-section">
+        <div class="timer-display">
+            <span id="timer">00:00:00</span>
+        </div>
+        <div class="quarter-panel">
+            <span>Quarter: <span id="quarter">1</span></span>
+        </div>
+        <div class="timer-buttons">
+            <button onclick="startGame()">START GAME</button>
+            <button onclick="timeOut()">TIME OUT</button>
+            <button onclick="resumeTimer()">RESUME</button>
+        </div>
+    </div>
+
+    <div class="scoreboard">
+        <div class="team-panel" id="home-panel">
+            <h3>HOME</h3>
+            <div class="display-box">
+                <span id="home-score">0</span>
+            </div>
+            <div class="control-panel">
+                <button onclick="addPoints('home', 1)">+1</button>
+                <button onclick="addPoints('home', 2)">+2</button>
+                <button onclick="addPoints('home', 3)">+3</button>
+            </div>
+        </div>
+        <div class="team-panel" id="guest-panel">
+            <h3>GUEST</h3>
+            <div class="display-box">
+                <span id="guest-score">0</span>
+            </div>
+            <div class="control-panel">
+                <button onclick="addPoints('guest', 1)">+1</button>
+                <button onclick="addPoints('guest', 2)">+2</button>
+                <button onclick="addPoints('guest', 3)">+3</button>
+            </div>
+        </div>
+    </div>
+    <button class="new-game-btn" onclick="newGame()">NEW GAME</button>
+    <script src="prj.js"></script>
+</body>
+</html>
